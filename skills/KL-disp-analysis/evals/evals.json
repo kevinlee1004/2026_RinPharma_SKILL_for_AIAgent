@@ -1,0 +1,26 @@
+{
+  "skill_name": "KL_disp_analysis",
+  "evals": [
+    {
+      "id": 0,
+      "name": "explicit-r-patient-status",
+      "prompt": "Write an R script to read /home/kevinlee/cdisc/sdtm/ds.xpt to provide patient status in a .md file, and run the R script to create the .md file.",
+      "expected_output": "disp_analysis.R copied to cwd plus a markdown report with Overview / Status Summary / Reason for Discontinuation / Data Notes and no per-subject listing. 110 completed, 144 discontinued, 52 screen failures.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "name": "python-completion-vs-dropout",
+      "prompt": "I've got the study data in /home/kevinlee/cdisc. How many patients actually finished the study versus dropped out, and what were the main reasons people came off? Use python please and save it as markdown so I can paste it into our status deck.",
+      "expected_output": "disp_analysis.py run against the study dir, markdown report with correct counts and DSDECOD-based reason breakdown, completion rate denominator made explicit.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "dropout-rate-no-language",
+      "prompt": "what's the dropout rate in /home/kevinlee/cdisc/sdtm and which reason is most common? i need a markdown summary for the DSMB packet",
+      "expected_output": "Asks for or sensibly defaults to a language, produces the four-section markdown report, states dropout rate with its denominator (144/254 enrolled = 56.7%), identifies ADVERSE EVENT (92) as leading reason.",
+      "files": []
+    }
+  ]
+}
